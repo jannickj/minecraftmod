@@ -4,3 +4,5 @@ obj/
 /FlamingGoose/GooseEngine/*.suo
 TestResults/
 *.user
+jars/
+/forge/mcp/jars
