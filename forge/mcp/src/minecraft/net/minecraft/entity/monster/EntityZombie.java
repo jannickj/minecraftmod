@@ -90,7 +90,7 @@ public class EntityZombie extends EntityMob
 
     public int getMaxHealth()
     {
-        return 20;
+        return 100;
     }
 
     /**
@@ -227,7 +227,7 @@ public class EntityZombie extends EntityMob
     {
         ItemStack itemstack = this.getHeldItem();
         float f = (float)(this.getMaxHealth() - this.getHealth()) / (float)this.getMaxHealth();
-        int i = 3 + MathHelper.floor_float(f * 4.0F);
+        int i = 15 + MathHelper.floor_float(f * 4.0F);
 
         if (itemstack != null)
         {
