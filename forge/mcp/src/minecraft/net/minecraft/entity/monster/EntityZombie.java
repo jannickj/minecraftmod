@@ -52,6 +52,8 @@ public class EntityZombie extends EntityMob
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 16.0F, 0, true));
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityVillager.class, 16.0F, 0, false));
+    
+        System.out.println("ZOMBIE CREATED");
     }
 
     protected int func_96121_ay()
