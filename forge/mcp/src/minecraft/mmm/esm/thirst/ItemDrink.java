@@ -12,10 +12,12 @@ import net.minecraft.world.World;
 public class ItemDrink extends Item 
 {
 	private int thirst;
+	private int poisonticks;
 	
-	public ItemDrink(int id, int thirstcount) {
+	public ItemDrink(int id, int thirstcount, int poisonticks) {
 		super(id);
 		this.thirst = thirstcount;
+		this.poisonticks = poisonticks;
 	}
 	
 	public ItemStack onEaten(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)

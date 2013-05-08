@@ -1,6 +1,7 @@
 package mmm.esm.thirst;
 
-import mmm.esm.thirst.items.WoodenWaterBucketItem;
+import mmm.esm.thirst.items.UnfilteredWaterCupItem;
+import mmm.esm.thirst.items.WoodenCupItem;
 import net.minecraft.item.Item;
 //This Import list will grow longer with each additional tutorial.
 //It's not pruned between full class postings, unlike other tutorial code.
@@ -27,9 +28,12 @@ public class ThirstLoader {
      
      @Instance("ThirstLoader")
      public static ThirstLoader instance;
+     
+     private final static UnfilteredWaterCupItem unfilteredWaterCup = new UnfilteredWaterCupItem(4051,10,100);
 
-     private final static Item woodenWaterBucket = new WoodenWaterBucketItem(2400)
-             .setMaxStackSize(16).setUnlocalizedName("woodenWaterBucket");
+     private final static Item woodenCup = new WoodenCupItem(4050,unfilteredWaterCup);
+     
+     
      
      @PreInit
      public void preInit(FMLPreInitializationEvent event) {
@@ -38,7 +42,8 @@ public class ThirstLoader {
      
      @Init
      public void load(FMLInitializationEvent event) {
-             LanguageRegistry.addName(woodenWaterBucket, "Cup");
+             LanguageRegistry.addName(woodenCup, "Cup");
+             LanguageRegistry.addName(unfilteredWaterCup, "Cup With Unfiltered Water");
              
      }
      
