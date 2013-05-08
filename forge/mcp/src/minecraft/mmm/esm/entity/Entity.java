@@ -24,6 +24,6 @@ public class Entity
        public void load(FMLInitializationEvent event)
        {
     	 EntityList.addMapping(Zombie.class,"Zombie",54, 44975, 7969893);
-    	 Minecraft.loadWorld(Player.class)
+    	 EntityList.addMapping(Skeleton.class,"Skeleton",51, 12698049, 4802889);
        }
 }
