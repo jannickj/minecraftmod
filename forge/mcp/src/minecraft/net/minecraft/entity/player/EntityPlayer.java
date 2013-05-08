@@ -83,7 +83,7 @@ import net.minecraftforge.event.entity.player.PlayerSleepInBedEvent;
 public abstract class EntityPlayer extends EntityLiving implements ICommandSender
 {
     public static final String PERSISTED_NBT_TAG = "PlayerPersisted";
-    public int maxHealth = 20;
+    public int maxHealth = 10; //was 20
 
     /** Inventory of the player */
     public InventoryPlayer inventory = new InventoryPlayer(this);
@@ -199,7 +199,7 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
 
     public int getMaxHealth()
     {
-        return maxHealth <= 0 ? 20 : maxHealth;
+        return maxHealth <= 0 ? 10 : maxHealth;
     }
 
     protected void entityInit()
