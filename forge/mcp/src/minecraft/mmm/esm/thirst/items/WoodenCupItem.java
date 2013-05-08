@@ -15,13 +15,12 @@ import net.minecraft.world.World;
 
 public class WoodenCupItem extends Item {
 
-	private UnfilteredWaterCupItem unfilteredRef;
-	public WoodenCupItem(int par1, UnfilteredWaterCupItem unfilteredRef) {
+
+	public WoodenCupItem(int par1) {
 		super(par1);
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName("woodenCup");
-		this.unfilteredRef = unfilteredRef;
 		
 	}
 	
@@ -57,7 +56,7 @@ public class WoodenCupItem extends Item {
             Material m = par2World.getBlockMaterial(i, j, k);
             if (m == Material.water && par2World.getBlockMetadata(i, j, k) == 0)
             {
-            	return new ItemStack(unfilteredRef);
+            	return new ItemStack(ThirstLoader.unfilteredWaterCup);
             }
         }
 		

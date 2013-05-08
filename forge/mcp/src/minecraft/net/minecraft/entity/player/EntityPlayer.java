@@ -402,6 +402,7 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
 
         if (!this.worldObj.isRemote)
         {
+        	this.thirstStats.onUpdate(this);
             this.foodStats.onUpdate(this);
         }
         FMLCommonHandler.instance().onPlayerPostTick(this);
@@ -937,7 +938,8 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
             this.spawnChunk = new ChunkCoordinates(par1NBTTagCompound.getInteger("SpawnX"), par1NBTTagCompound.getInteger("SpawnY"), par1NBTTagCompound.getInteger("SpawnZ"));
             this.spawnForced = par1NBTTagCompound.getBoolean("SpawnForced");
         }
-
+        
+        this.thirstStats.readNBT(par1NBTTagCompound);
         this.foodStats.readNBT(par1NBTTagCompound);
         this.capabilities.readCapabilitiesFromNBT(par1NBTTagCompound);
 
@@ -971,7 +973,8 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
             par1NBTTagCompound.setInteger("SpawnZ", this.spawnChunk.posZ);
             par1NBTTagCompound.setBoolean("SpawnForced", this.spawnForced);
         }
-
+        
+        this.thirstStats.writeNBT(par1NBTTagCompound);
         this.foodStats.writeNBT(par1NBTTagCompound);
         this.capabilities.writeCapabilitiesToNBT(par1NBTTagCompound);
         par1NBTTagCompound.setTag("EnderItems", this.theInventoryEnderChest.saveInventoryToNBT());

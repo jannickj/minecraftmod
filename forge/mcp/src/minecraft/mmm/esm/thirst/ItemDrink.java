@@ -22,8 +22,8 @@ public class ItemDrink extends Item
 	
 	public ItemStack onEaten(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
-		
-		par3EntityPlayer.addPotionEffect(new WaterPoisonEffect(10));
+		if(this.poisonticks > 0)
+			par3EntityPlayer.addPotionEffect(new WaterPoisonEffect(this.poisonticks));
 		par2World.playSoundAtEntity(par3EntityPlayer, "random.burp", 0.5F, par2World.rand.nextFloat() * 0.1F + 0.9F);
 		return par1ItemStack;
     }

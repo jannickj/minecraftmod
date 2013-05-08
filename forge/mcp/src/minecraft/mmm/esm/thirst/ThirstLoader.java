@@ -29,9 +29,9 @@ public class ThirstLoader {
      @Instance("ThirstLoader")
      public static ThirstLoader instance;
      
-     private final static UnfilteredWaterCupItem unfilteredWaterCup = new UnfilteredWaterCupItem(4051,10,100);
+     public final static UnfilteredWaterCupItem unfilteredWaterCup = new UnfilteredWaterCupItem(4051);
 
-     private final static Item woodenCup = new WoodenCupItem(4050,unfilteredWaterCup);
+     public final static Item woodenCup = new WoodenCupItem(4050);
      
      
      
@@ -42,7 +42,7 @@ public class ThirstLoader {
      
      @Init
      public void load(FMLInitializationEvent event) {
-             LanguageRegistry.addName(woodenCup, "Cup");
+             LanguageRegistry.addName(woodenCup, "Wooden Cup");
              LanguageRegistry.addName(unfilteredWaterCup, "Cup With Unfiltered Water");
              
      }

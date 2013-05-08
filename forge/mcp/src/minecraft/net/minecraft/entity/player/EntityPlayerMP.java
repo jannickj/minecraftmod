@@ -342,7 +342,7 @@ public class EntityPlayerMP extends EntityPlayer implements ICrafting
 
             if (this.getHealth() != this.lastHealth || this.lastFoodLevel != this.foodStats.getFoodLevel() || this.foodStats.getSaturationLevel() == 0.0F != this.wasHungry)
             {
-                this.playerNetServerHandler.sendPacketToPlayer(new Packet8UpdateHealth(this.getHealth(), this.foodStats.getFoodLevel(), this.foodStats.getSaturationLevel()));
+                this.playerNetServerHandler.sendPacketToPlayer(new Packet8UpdateHealth(this.getHealth(), this.foodStats.getFoodLevel(), this.foodStats.getSaturationLevel(), this.thirstStats.getThirstLevel()));
                 this.lastHealth = this.getHealth();
                 this.lastFoodLevel = this.foodStats.getFoodLevel();
                 this.wasHungry = this.foodStats.getSaturationLevel() == 0.0F;

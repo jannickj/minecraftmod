@@ -1023,6 +1023,7 @@ public class NetClientHandler extends NetHandler
         this.mc.thePlayer.setHealth(par1Packet8UpdateHealth.healthMP);
         this.mc.thePlayer.getFoodStats().setFoodLevel(par1Packet8UpdateHealth.food);
         this.mc.thePlayer.getFoodStats().setFoodSaturationLevel(par1Packet8UpdateHealth.foodSaturation);
+        this.mc.thePlayer.getThirstStats().setThirstLevel(par1Packet8UpdateHealth.thirstlevel);
     }
 
     /**

@@ -11,6 +11,7 @@ import net.minecraft.profiler.Profiler;
 public class ThirstGui {
 
 	private ThirstIconCollection iconcon;
+	private int iconscount = 9;
 	
 	public ThirstGui(ThirstIconCollection iconcon)
 	{
@@ -19,9 +20,10 @@ public class ThirstGui {
 	
 	public void Draw(ThirstStats thirstmodel, Gui gui, int x, int y)
 	{
+		float percentage = thirstmodel.thirstLevelPercentage();
+		int filledcount =(int)Math.round(percentage*((float)iconscount));
 		
-		
-		for(int i = 1; i <= thirstmodel.getMaxCapacity();i++)
+		for(int i = 1; i <= filledcount;i++)
 		{
 			//drawicon(gui, x-i*iconcon.getIconWidth(), y, iconcon.getIcon(ThirstIcons.WaterDropShadow));
 			drawicon(gui, x-i*iconcon.getIconWidth(), y, iconcon.getIcon(ThirstIcons.WaterDrop));
