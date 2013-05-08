@@ -227,7 +227,7 @@ public class EntityZombie extends EntityMob
     {
         ItemStack itemstack = this.getHeldItem();
         float f = (float)(this.getMaxHealth() - this.getHealth()) / (float)this.getMaxHealth();
-        int i = 15 + MathHelper.floor_float(f * 4.0F);
+        int i = 5 + MathHelper.floor_float(f * 4.0F);
 
         if (itemstack != null)
         {
