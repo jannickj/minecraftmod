@@ -23,7 +23,7 @@ public class ThirstGui {
 		
 		for(int i = 1; i <= thirstmodel.getMaxCapacity();i++)
 		{
-			drawicon(gui, x-i*iconcon.getIconWidth(), y, iconcon.getIcon(ThirstIcons.WaterDropShadow));
+			//drawicon(gui, x-i*iconcon.getIconWidth(), y, iconcon.getIcon(ThirstIcons.WaterDropShadow));
 			drawicon(gui, x-i*iconcon.getIconWidth(), y, iconcon.getIcon(ThirstIcons.WaterDrop));
 			
 		}
