@@ -120,9 +120,6 @@ public class GuiIngameForge extends GuiIngame
             rand.setSeed((long)(updateCounter * 312871));
             
             
-            
-			if(renderThirst) renderThirst(width, height);
-            
             mc.renderEngine.bindTexture("/gui/icons.png");
 
             if (renderCrosshairs) renderCrosshairs(width, height);
@@ -130,6 +127,9 @@ public class GuiIngameForge extends GuiIngame
 
             if (this.mc.playerController.shouldDrawHUD())
             {
+            	if(renderThirst) renderThirst(width, height);
+                
+                mc.renderEngine.bindTexture("/gui/icons.png");
                 if (renderArmor)  renderArmor(width, height);
                 if (renderHealth) renderHealth(width, height);
                 if (renderFood)   renderFood(width, height);
