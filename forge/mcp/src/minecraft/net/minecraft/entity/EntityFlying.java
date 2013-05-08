@@ -45,7 +45,7 @@ public abstract class EntityFlying extends EntityLiving
         }
         else
         {
-            float f2 = 0.91F;
+            float f2 = 0.91F; //0.91F
 
             if (this.onGround)
             {
