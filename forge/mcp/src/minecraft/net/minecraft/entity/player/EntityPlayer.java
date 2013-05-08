@@ -174,8 +174,8 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
      * This field starts off equal to getMaxItemUseDuration and is decremented on each tick
      */
     private int itemInUseCount;
-    protected float speedOnGround = 0.1F;
-    protected float speedInAir = 0.02F;
+    protected float speedOnGround = 0.1F; // 0.1
+    protected float speedInAir = 0.02F; //0.02F 
     private int field_82249_h = 0;
 
     /**
@@ -199,7 +199,7 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
 
     public int getMaxHealth()
     {
-        return maxHealth <= 0 ? 10 : maxHealth;
+        return maxHealth <= 0 ? 10 : maxHealth; //was 20
     }
 
     protected void entityInit()
@@ -610,6 +610,7 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
         {
             f = 0.1F;
         }
+        
 
         if (!this.onGround || this.getHealth() <= 0)
         {
