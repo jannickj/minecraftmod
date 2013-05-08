@@ -1,5 +1,7 @@
 bin/
 obj/
+temp/
+logs/
 .metadata/
 /FlamingGoose/GooseEngine/*.suo
 TestResults/

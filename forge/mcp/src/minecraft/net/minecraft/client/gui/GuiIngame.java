@@ -7,6 +7,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
+
+import mmm.esm.thirst.gui.ThirstGui;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -62,6 +64,8 @@ public class GuiIngame extends Gui
 
     /** The ItemStack that is currently being highlighted */
     protected ItemStack highlightingItemStack;
+    
+
 
     public GuiIngame(Minecraft par1Minecraft)
     {
@@ -281,57 +285,60 @@ public class GuiIngame extends Gui
                         this.drawTexturedModalRect(l4, k4, j3 + 45, 9 * b1, 9, 9);
                     }
                 }
+                
+                
+                this.mc.mcProfiler.endSection();
 
-                this.mc.mcProfiler.endStartSection("food");
-
-                for (j4 = 0; j4 < 10; ++j4)
-                {
-                    j3 = k3;
-                    l3 = 16;
-                    byte b2 = 0;
-
-                    if (this.mc.thePlayer.isPotionActive(Potion.hunger))
-                    {
-                        l3 += 36;
-                        b2 = 13;
-                    }
-
-                    if (this.mc.thePlayer.getFoodStats().getSaturationLevel() <= 0.0F && this.updateCounter % (l1 * 3 + 1) == 0)
-                    {
-                        j3 = k3 + (this.rand.nextInt(3) - 1);
-                    }
-
-                    if (flag2)
-                    {
-                        b2 = 1;
-                    }
-
-                    k4 = i4 - j4 * 8 - 9;
-                    this.drawTexturedModalRect(k4, j3, 16 + b2 * 9, 27, 9, 9);
-
-                    if (flag2)
-                    {
-                        if (j4 * 2 + 1 < k1)
-                        {
-                            this.drawTexturedModalRect(k4, j3, l3 + 54, 27, 9, 9);
-                        }
-
-                        if (j4 * 2 + 1 == k1)
-                        {
-                            this.drawTexturedModalRect(k4, j3, l3 + 63, 27, 9, 9);
-                        }
-                    }
-
-                    if (j4 * 2 + 1 < l1)
-                    {
-                        this.drawTexturedModalRect(k4, j3, l3 + 36, 27, 9, 9);
-                    }
-
-                    if (j4 * 2 + 1 == l1)
-                    {
-                        this.drawTexturedModalRect(k4, j3, l3 + 45, 27, 9, 9);
-                    }
-                }
+//                this.mc.mcProfiler.endStartSection("food");
+//
+//                for (j4 = 0; j4 < 10; ++j4)
+//                {
+//                    j3 = k3;
+//                    l3 = 16;
+//                    byte b2 = 0;
+//
+//                    if (this.mc.thePlayer.isPotionActive(Potion.hunger))
+//                    {
+//                        l3 += 36;
+//                        b2 = 13;
+//                    }
+//
+//                    if (this.mc.thePlayer.getFoodStats().getSaturationLevel() <= 0.0F && this.updateCounter % (l1 * 3 + 1) == 0)
+//                    {
+//                        j3 = k3 + (this.rand.nextInt(3) - 1);
+//                    }
+//
+//                    if (flag2)
+//                    {
+//                        b2 = 1;
+//                    }
+//
+//                    k4 = i4 - j4 * 8 - 9;
+//                    this.drawTexturedModalRect(k4, j3, 16 + b2 * 9, 27, 9, 9);
+//
+//                    if (flag2)
+//                    {
+//                        if (j4 * 2 + 1 < k1)
+//                        {
+//                            this.drawTexturedModalRect(k4, j3, l3 + 54, 27, 9, 9);
+//                        }
+//
+//                        if (j4 * 2 + 1 == k1)
+//                        {
+//                            this.drawTexturedModalRect(k4, j3, l3 + 63, 27, 9, 9);
+//                        }
+//                    }
+//
+//                    if (j4 * 2 + 1 < l1)
+//                    {
+//                        this.drawTexturedModalRect(k4, j3, l3 + 36, 27, 9, 9);
+//                    }
+//
+//                    if (j4 * 2 + 1 == l1)
+//                    {
+//                        this.drawTexturedModalRect(k4, j3, l3 + 45, 27, 9, 9);
+//                    }
+//                }
 
                 this.mc.mcProfiler.endStartSection("air");
 
@@ -356,7 +363,8 @@ public class GuiIngame extends Gui
 
                 this.mc.mcProfiler.endSection();
             }
-
+            
+            
             GL11.glDisable(GL11.GL_BLEND);
             this.mc.mcProfiler.startSection("actionBar");
             GL11.glEnable(GL12.GL_RESCALE_NORMAL);

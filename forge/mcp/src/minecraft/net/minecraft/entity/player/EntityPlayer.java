@@ -7,6 +7,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+
+import mmm.esm.thirst.ThirstStats;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
 import net.minecraft.block.material.Material;
@@ -97,6 +99,7 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
 
     /** The player's food stats. (See class FoodStats) */
     protected FoodStats foodStats = new FoodStats();
+    protected ThirstStats thirstStats = new ThirstStats();
 
     /**
      * Used to tell if the player pressed jump twice. If this is at 0 and it's pressed (And they are allowed to fly, as
@@ -2105,6 +2108,14 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
     public FoodStats getFoodStats()
     {
         return this.foodStats;
+    }
+    
+    /**
+     * Returns the player's ThirstStats object.
+     */
+    public ThirstStats getThirstStats()
+    {
+        return this.thirstStats;
     }
 
     public boolean canEat(boolean par1)
