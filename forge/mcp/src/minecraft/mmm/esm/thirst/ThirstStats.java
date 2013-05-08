@@ -22,7 +22,7 @@ public class ThirstStats
 	public int getMaxCapacity() 
 	{
 		// TODO Auto-generated method stub
-		return 2000;
+		return 15000;
 	}
 	
 	public float thirstLevelPercentage()

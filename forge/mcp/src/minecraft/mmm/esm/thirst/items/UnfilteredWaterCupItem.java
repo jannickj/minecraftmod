@@ -12,7 +12,7 @@ public class UnfilteredWaterCupItem extends ItemDrink {
 
 	public UnfilteredWaterCupItem(int id) {
 		super(id, 10, 200);
-		setMaxStackSize(64);
+		setMaxStackSize(1);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName("unfilteredWaterCup");
 	}

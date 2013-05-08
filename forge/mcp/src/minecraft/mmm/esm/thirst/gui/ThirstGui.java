@@ -23,11 +23,17 @@ public class ThirstGui {
 		float percentage = thirstmodel.thirstLevelPercentage();
 		int filledcount =(int)Math.round(percentage*((float)iconscount));
 		
+		int unfilled = iconscount - filledcount;
+		
 		for(int i = 1; i <= filledcount;i++)
 		{
 			//drawicon(gui, x-i*iconcon.getIconWidth(), y, iconcon.getIcon(ThirstIcons.WaterDropShadow));
 			drawicon(gui, x-i*iconcon.getIconWidth(), y, iconcon.getIcon(ThirstIcons.WaterDrop));
 			
+		}
+		for(int i = filledcount+1; i<= iconscount; i++)
+		{
+			drawicon(gui, x-i*iconcon.getIconWidth(), y, iconcon.getIcon(ThirstIcons.WaterDropEmpty));
 		}
 
 	}
