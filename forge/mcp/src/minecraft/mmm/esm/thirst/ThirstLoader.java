@@ -38,7 +38,7 @@ public class ThirstLoader {
      
      @Init
      public void load(FMLInitializationEvent event) {
-             LanguageRegistry.addName(woodenWaterBucket, "Wooden Water Bucket");
+             LanguageRegistry.addName(woodenWaterBucket, "Cup");
              
      }
      
