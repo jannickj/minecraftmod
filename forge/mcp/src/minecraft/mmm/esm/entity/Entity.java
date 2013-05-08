@@ -1,4 +1,4 @@
-package mmm.esm.monsters;
+package mmm.esm.entity;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -9,18 +9,19 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.EntityList;
 
-@Mod(modid = Monsters.modid, name = "esm", version = "1.5.2")
+@Mod(modid = Entity.modid, name = "esm", version = "1.5.2")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 
 
-public class Monsters
+public class Entity
 {
-       public static final String modid = "Monsters";
+       public static final String modid = "Entity";
        
        
        @Init
        public void load(FMLInitializationEvent event)
        {
-    	 EntityList.addMapping(ZombieIndi.class,"Zombie",54, 44975, 7969893);
+    	 EntityList.addMapping(Zombie.class,"Zombie",54, 44975, 7969893);
+    	 
        }
 }
