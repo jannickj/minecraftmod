@@ -56,9 +56,15 @@ public class WoodenCupItem extends Item {
             Material m = par2World.getBlockMaterial(i, j, k);
             if (m == Material.water && par2World.getBlockMetadata(i, j, k) == 0)
             {
-            	par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(par1ItemStack.itemID,par1ItemStack.stackSize-1,par1ItemStack.getItemDamage()));
+            	ItemStack unfiltered = new ItemStack(ThirstLoader.unfilteredWaterCup);
+            	if(!par3EntityPlayer.inventory.addItemStackToInventory(unfiltered))
+            	{
+            		par3EntityPlayer.dropPlayerItem(unfiltered);
+            	}
             	
-            	return new ItemStack(ThirstLoader.unfilteredWaterCup);
+            	
+            	
+            	return new ItemStack(par1ItemStack.itemID,par1ItemStack.stackSize-1,par1ItemStack.getItemDamage());
             }
         }
 		
