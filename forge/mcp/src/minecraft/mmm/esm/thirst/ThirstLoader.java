@@ -47,11 +47,12 @@ public class ThirstLoader {
      public void load(FMLInitializationEvent event) {
              LanguageRegistry.addName(woodenCup, "Wooden Cup");
              LanguageRegistry.addName(unfilteredWaterCup, "Cup of Unfiltered Water");
-             LanguageRegistry.addName(filteredWaterCup, "Cup of Filtered Water");
-             ItemStack plank = new ItemStack(Block.planks);
              ItemStack coal = new ItemStack(Item.coal);
              coal.setItemDamage(1);
-             GameRegistry.addRecipe(new ItemStack(woodenCup), "x x", "x x", " x ", 'x', plank);
+             
+             
+             for(int i = 0; i < 4; i++)
+            	 GameRegistry.addRecipe(new ItemStack(woodenCup), "x x", "x x", " x ", 'x', new ItemStack(Block.planks,1,i));
              GameRegistry.addRecipe(new ItemStack(filteredWaterCup), " x", " y", 'x', coal, 'y', unfilteredWaterCup);
      }
      
