@@ -9,6 +9,7 @@ import net.minecraft.util.DamageSource;
 public class ThirstStats 
 {
 	
+	private static final int THIRSTDMG = 1;
 	private int thirst_level = getMaxCapacity();
 	private int tickcounter = getTickCountBetweenDamage();
 	
@@ -16,16 +17,22 @@ public class ThirstStats
 	
 	public int getTickCountBetweenDamage()
 	{
-		return 80;		
+		return 60;		
 	}
+	
+	public int getLastIntervals()
+	{
+		return 9;
+	}
+	
 	
 	public int getMaxCapacity() 
 	{
 		// TODO Auto-generated method stub
-		return 15000;
+		return 18000;
 	}
 	
-	public float thirstLevelPercentage()
+	public float getLevelPercentage()
 	{
 		float thirst = this.thirst_level;
 		float max = this.getMaxCapacity();
@@ -33,7 +40,11 @@ public class ThirstStats
 		return result;
 	}
 
-	public void onUpdate(EntityPlayer entityPlayer) {
+	public void onUpdate(EntityPlayer entityPlayer) 
+	{
+		
+		if(entityPlayer.isEntityInvulnerable())
+			return;
 		
 		modThirst(-1);
 		if(thirst_level == 0)
@@ -41,7 +52,7 @@ public class ThirstStats
 			if(tickcounter == 0)
 			{
 				
-				entityPlayer.attackEntityFrom(DamageSource.starve, 1);
+				entityPlayer.attackEntityFrom(DamageSource.starve, THIRSTDMG);
 				this.tickcounter = getTickCountBetweenDamage();
 			}
 			else
@@ -58,9 +69,15 @@ public class ThirstStats
 		
 		return newthirst;
 	}
+	
+	public int modThirstInterval(int mod)
+	{
+		int tointerval = this.getMaxCapacity()/this.getLastIntervals();
+		return tointerval*modThirst(mod*tointerval);
+	}
 
 	public void readNBT(NBTTagCompound par1nbtTagCompound) {
-		if (par1nbtTagCompound.hasKey("thirst_Level"))
+		if (par1nbtTagCompound.hasKey("thirst_level"))
         {
             this.thirst_level = par1nbtTagCompound.getInteger("thirst_level");
             this.tickcounter = par1nbtTagCompound.getInteger("thirst_tick_counter");
@@ -71,7 +88,7 @@ public class ThirstStats
      * Writes food stats to an NBT object.
      */
 	public void writeNBT(NBTTagCompound par1nbtTagCompound) {
-		par1nbtTagCompound.setInteger("thirst_Level", this.thirst_level);
+		par1nbtTagCompound.setInteger("thirst_level", this.thirst_level);
 		par1nbtTagCompound.setInteger("thirst_tick_counter", this.tickcounter);
 		
 	}
@@ -84,6 +101,11 @@ public class ThirstStats
 	@SideOnly(Side.CLIENT)
 	public void setThirstLevel(int thirstlevel) {
   		this.thirst_level = thirstlevel;
+	}
+
+	public int getInterval() {
+		// TODO Auto-generated method stub
+		return (int) Math.ceil(this.getLastIntervals()*this.getLevelPercentage());
 	}
 	
 	

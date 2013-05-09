@@ -11,7 +11,7 @@ import mmm.esm.thirst.ThirstLoader;
 public class UnfilteredWaterCupItem extends ItemDrink {
 
 	public UnfilteredWaterCupItem(int id) {
-		super(id, 10, 200);
+		super(id, 4, 1000);
 		setMaxStackSize(1);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName("unfilteredWaterCup");

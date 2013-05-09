@@ -158,6 +158,8 @@ public class EntityPlayerMP extends EntityPlayer implements ICrafting
      */
     public boolean playerConqueredTheEnd = false;
 
+	private int lastThirstLevelInterval;
+
     public EntityPlayerMP(MinecraftServer par1MinecraftServer, World par2World, String par3Str, ItemInWorldManager par4ItemInWorldManager)
     {
         super(par2World);
@@ -340,10 +342,11 @@ public class EntityPlayerMP extends EntityPlayer implements ICrafting
                 }
             }
 
-            if (this.getHealth() != this.lastHealth || this.lastFoodLevel != this.foodStats.getFoodLevel() || this.foodStats.getSaturationLevel() == 0.0F != this.wasHungry)
+            if (this.getHealth() != this.lastHealth || this.lastFoodLevel != this.foodStats.getFoodLevel() || this.foodStats.getSaturationLevel() == 0.0F != this.wasHungry || this.lastThirstLevelInterval != this.thirstStats.getInterval())
             {
                 this.playerNetServerHandler.sendPacketToPlayer(new Packet8UpdateHealth(this.getHealth(), this.foodStats.getFoodLevel(), this.foodStats.getSaturationLevel(), this.thirstStats.getThirstLevel()));
                 this.lastHealth = this.getHealth();
+                this.lastThirstLevelInterval = this.thirstStats.getInterval();
                 this.lastFoodLevel = this.foodStats.getFoodLevel();
                 this.wasHungry = this.foodStats.getSaturationLevel() == 0.0F;
             }

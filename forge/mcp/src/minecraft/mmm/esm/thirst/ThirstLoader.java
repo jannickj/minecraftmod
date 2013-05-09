@@ -45,6 +45,10 @@ public class ThirstLoader {
              LanguageRegistry.addName(woodenCup, "Wooden Cup");
              LanguageRegistry.addName(unfilteredWaterCup, "Cup With Unfiltered Water");
              
+             ItemStack plank = new ItemStack(Block.planks);
+             
+             GameRegistry.addRecipe(new ItemStack(woodenCup), "x x", "x x", " x ", 'x', plank);
+             
      }
      
      @PostInit

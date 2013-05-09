@@ -25,6 +25,7 @@ public class ItemDrink extends Item
 		if(this.poisonticks > 0)
 			par3EntityPlayer.addPotionEffect(new WaterPoisonEffect(this.poisonticks));
 		par2World.playSoundAtEntity(par3EntityPlayer, "random.burp", 0.5F, par2World.rand.nextFloat() * 0.1F + 0.9F);
+		par3EntityPlayer.getThirstStats().modThirstInterval(thirst);
 		return par1ItemStack;
     }
 	
