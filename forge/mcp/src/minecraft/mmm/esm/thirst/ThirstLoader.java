@@ -52,7 +52,7 @@ public class ThirstLoader {
              
              
              for(int i = 0; i < 4; i++)
-            	 GameRegistry.addRecipe(new ItemStack(woodenCup), "x x", "x x", " x ", 'x', new ItemStack(Block.planks,1,i));
+            	 GameRegistry.addRecipe(new ItemStack(woodenCup,3), "x x", "x x", " x ", 'x', new ItemStack(Block.planks,1,i));
              GameRegistry.addRecipe(new ItemStack(filteredWaterCup), " x", " y", 'x', coal, 'y', unfilteredWaterCup);
      }
      

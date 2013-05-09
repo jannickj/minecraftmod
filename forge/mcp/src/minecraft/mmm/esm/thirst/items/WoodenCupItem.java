@@ -18,7 +18,7 @@ public class WoodenCupItem extends Item {
 
 	public WoodenCupItem(int par1) {
 		super(par1);
-		setMaxStackSize(1);
+		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName("woodenCup");
 		
