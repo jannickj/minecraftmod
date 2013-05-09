@@ -1,5 +1,6 @@
 package mmm.esm.thirst;
 
+import mmm.esm.thirst.items.FilteredWaterCupItem;
 import mmm.esm.thirst.items.UnfilteredWaterCupItem;
 import mmm.esm.thirst.items.WoodenCupItem;
 import net.minecraft.item.Item;
@@ -29,6 +30,8 @@ public class ThirstLoader {
      @Instance("ThirstLoader")
      public static ThirstLoader instance;
      
+     public final static FilteredWaterCupItem filteredWaterCup = new FilteredWaterCupItem(4052);
+     
      public final static UnfilteredWaterCupItem unfilteredWaterCup = new UnfilteredWaterCupItem(4051);
 
      public final static Item woodenCup = new WoodenCupItem(4050);
@@ -43,8 +46,8 @@ public class ThirstLoader {
      @Init
      public void load(FMLInitializationEvent event) {
              LanguageRegistry.addName(woodenCup, "Wooden Cup");
-             LanguageRegistry.addName(unfilteredWaterCup, "Cup With Unfiltered Water");
-             
+             LanguageRegistry.addName(unfilteredWaterCup, "Cup of Unfiltered Water");
+             LanguageRegistry.addName(filteredWaterCup, "Cup of Filtered Water");
              ItemStack plank = new ItemStack(Block.planks);
              
              GameRegistry.addRecipe(new ItemStack(woodenCup), "x x", "x x", " x ", 'x', plank);
