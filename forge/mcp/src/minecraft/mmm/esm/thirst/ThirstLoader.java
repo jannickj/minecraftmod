@@ -49,9 +49,10 @@ public class ThirstLoader {
              LanguageRegistry.addName(unfilteredWaterCup, "Cup of Unfiltered Water");
              LanguageRegistry.addName(filteredWaterCup, "Cup of Filtered Water");
              ItemStack plank = new ItemStack(Block.planks);
-             
+             ItemStack coal = new ItemStack(Item.coal);
+             coal.setItemDamage(1);
              GameRegistry.addRecipe(new ItemStack(woodenCup), "x x", "x x", " x ", 'x', plank);
-             
+             GameRegistry.addRecipe(new ItemStack(filteredWaterCup), " x", " y", 'x', coal, 'y', unfilteredWaterCup);
      }
      
      @PostInit
