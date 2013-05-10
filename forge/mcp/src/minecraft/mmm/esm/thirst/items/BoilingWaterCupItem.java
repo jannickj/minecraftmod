@@ -7,11 +7,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import mmm.esm.thirst.ItemDrink;
 import mmm.esm.thirst.ThirstLoader;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.DamageSource;
 
 public class BoilingWaterCupItem extends ItemDrink {
 
 	public BoilingWaterCupItem(int id) {
 		super(id, 2, 0);
+		
 		setMaxStackSize(1);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName("BoilingWaterCup");

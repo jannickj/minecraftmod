@@ -24,7 +24,10 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+import cpw.mods.fml.common.registry.ItemData;
 import mmm.esm.thirst.items.condensator.*;
+
+
 
 @Mod(modid="thirstmod", name="Thirst Mod", version="1.0.0")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
@@ -36,7 +39,7 @@ public class ThirstLoader {
      
      public final static Item BoilingWaterCup = new BoilingWaterCupItem (4054);
      
-     public final static Item PureWaterCup = new PureWaterCupItem(4053);
+     public final static Item PureWaterCup = new PureWaterCupItem(5000);
      
      public final static Item filteredWaterCup = new FilteredWaterCupItem(4052);
      
@@ -46,6 +49,7 @@ public class ThirstLoader {
      
      public final static Block blockCondensator = new BlockCondensator(4055);
     
+     
      
      @PreInit
      public void preInit(FMLPreInitializationEvent event) {
@@ -74,7 +78,9 @@ public class ThirstLoader {
              for(int i = 0; i < 4; i++)
             	 GameRegistry.addRecipe(new ItemStack(woodenCup,3), "x x", "x x", " x ", 'x', new ItemStack(Block.planks,1,i));
              GameRegistry.addRecipe(new ItemStack(filteredWaterCup), " x", " y", 'x', coal, 'y', unfilteredWaterCup);
-             GameRegistry.addSmelting(4051,new ItemStack (BoilingWaterCup),0.1F);
+             GameRegistry.addSmelting(filteredWaterCup.itemID,new ItemStack (BoilingWaterCup),0.5F);
+             GameRegistry.addSmelting(unfilteredWaterCup.itemID,new ItemStack (BoilingWaterCup),0.2F);
+            
              
      }
      
