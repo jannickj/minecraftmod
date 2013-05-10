@@ -11,6 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.src.ModLoader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -23,6 +24,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+import mmm.esm.thirst.items.condensator.*;
 
 @Mod(modid="thirstmod", name="Thirst Mod", version="1.0.0")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
@@ -38,10 +40,11 @@ public class ThirstLoader {
      
      public final static Item filteredWaterCup = new FilteredWaterCupItem(4052);
      
-     public final static UnfilteredWaterCupItem unfilteredWaterCup = new UnfilteredWaterCupItem(4051);
+     public final static Item unfilteredWaterCup = new UnfilteredWaterCupItem(4051);
 
      public final static Item woodenCup = new WoodenCupItem(4050);
      
+     public final static Block blockCondensator = new BlockCondensator(4054);
     
      
      @PreInit
@@ -55,7 +58,16 @@ public class ThirstLoader {
              LanguageRegistry.addName(unfilteredWaterCup, "Cup of Unfiltered Water");
              LanguageRegistry.addName(PureWaterCup, "Cup of Pure Water");
              LanguageRegistry.addName(filteredWaterCup, "Cup of Filtered Water");
+<<<<<<< HEAD
              LanguageRegistry.addName(BoilingWaterCup, "Cup of Boiling Water");
+=======
+             LanguageRegistry.addName(blockCondensator, "Condensator");
+             
+             ModLoader.registerBlock(blockCondensator);
+            
+             
+             
+>>>>>>> 258f16545570e9eaecdafefa895a88b84882a2d3
              ItemStack coal = new ItemStack(Item.coal);	
              coal.setItemDamage(1);
              
