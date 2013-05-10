@@ -4,6 +4,7 @@ import mmm.esm.thirst.items.FilteredWaterCupItem;
 import mmm.esm.thirst.items.UnfilteredWaterCupItem;
 import mmm.esm.thirst.items.WoodenCupItem;
 import mmm.esm.thirst.items.PureWaterCupItem;
+import mmm.esm.thirst.items.BoilingWaterCupItem;
 import net.minecraft.item.Item;
 //This Import list will grow longer with each additional tutorial.
 //It's not pruned between full class postings, unlike other tutorial code.
@@ -31,9 +32,11 @@ public class ThirstLoader {
      @Instance("ThirstLoader")
      public static ThirstLoader instance;
      
+     public final static Item BoilingWaterCup = new BoilingWaterCupItem (4054);
+     
      public final static Item PureWaterCup = new PureWaterCupItem(4053);
      
-     public final static FilteredWaterCupItem filteredWaterCup = new FilteredWaterCupItem(4052);
+     public final static Item filteredWaterCup = new FilteredWaterCupItem(4052);
      
      public final static UnfilteredWaterCupItem unfilteredWaterCup = new UnfilteredWaterCupItem(4051);
 
@@ -52,6 +55,7 @@ public class ThirstLoader {
              LanguageRegistry.addName(unfilteredWaterCup, "Cup of Unfiltered Water");
              LanguageRegistry.addName(PureWaterCup, "Cup of Pure Water");
              LanguageRegistry.addName(filteredWaterCup, "Cup of Filtered Water");
+             LanguageRegistry.addName(BoilingWaterCup, "Cup of Boiling Water");
              ItemStack coal = new ItemStack(Item.coal);	
              coal.setItemDamage(1);
              
@@ -59,6 +63,8 @@ public class ThirstLoader {
              for(int i = 0; i < 4; i++)
             	 GameRegistry.addRecipe(new ItemStack(woodenCup,3), "x x", "x x", " x ", 'x', new ItemStack(Block.planks,1,i));
              GameRegistry.addRecipe(new ItemStack(filteredWaterCup), " x", " y", 'x', coal, 'y', unfilteredWaterCup);
+             GameRegistry.addSmelting(Item.filteredWaterCup.itemID,new ItemStack (BoilingWaterCup),0.1F);
+             
      }
      
      @PostInit
