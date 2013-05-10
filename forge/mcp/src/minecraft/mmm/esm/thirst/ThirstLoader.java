@@ -44,7 +44,7 @@ public class ThirstLoader {
 
      public final static Item woodenCup = new WoodenCupItem(4050);
      
-     public final static Block blockCondensator = new BlockCondensator(4054);
+     public final static Block blockCondensator = new BlockCondensator(4055);
     
      
      @PreInit
@@ -58,16 +58,15 @@ public class ThirstLoader {
              LanguageRegistry.addName(unfilteredWaterCup, "Cup of Unfiltered Water");
              LanguageRegistry.addName(PureWaterCup, "Cup of Pure Water");
              LanguageRegistry.addName(filteredWaterCup, "Cup of Filtered Water");
-<<<<<<< HEAD
              LanguageRegistry.addName(BoilingWaterCup, "Cup of Boiling Water");
-=======
+
              LanguageRegistry.addName(blockCondensator, "Condensator");
              
              ModLoader.registerBlock(blockCondensator);
             
              
              
->>>>>>> 258f16545570e9eaecdafefa895a88b84882a2d3
+
              ItemStack coal = new ItemStack(Item.coal);	
              coal.setItemDamage(1);
              
@@ -75,7 +74,7 @@ public class ThirstLoader {
              for(int i = 0; i < 4; i++)
             	 GameRegistry.addRecipe(new ItemStack(woodenCup,3), "x x", "x x", " x ", 'x', new ItemStack(Block.planks,1,i));
              GameRegistry.addRecipe(new ItemStack(filteredWaterCup), " x", " y", 'x', coal, 'y', unfilteredWaterCup);
-             GameRegistry.addSmelting(Item.filteredWaterCup.itemID,new ItemStack (BoilingWaterCup),0.1F);
+             GameRegistry.addSmelting(4051,new ItemStack (BoilingWaterCup),0.1F);
              
      }
      
