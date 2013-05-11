@@ -1,6 +1,11 @@
 package mmm.esm.thirst;
 
+import mmm.esm.thirst.blocks.BlockBarrel;
+import mmm.esm.thirst.blocks.TileEntityBarrel;
+import mmm.esm.thirst.blocks.TileEntityCondensator;
 import mmm.esm.thirst.gui.ThirstGuiHandler;
+import mmm.esm.thirst.items.CanteenFilledItem;
+import mmm.esm.thirst.items.CanteenUnfilledItem;
 import mmm.esm.thirst.items.FilteredWaterCupItem;
 import mmm.esm.thirst.items.UnfilteredWaterCupItem;
 import mmm.esm.thirst.items.WoodenCupItem;
@@ -44,8 +49,7 @@ public class ThirstMod {
      
      @Instance("thirstmod")
      public static ThirstMod instance = new ThirstMod();
-     
-     public final static Item BoilingWaterCup = new BoilingWaterCupItem (4054);
+   
      @SidedProxy(clientSide = "mmm.esm.thirst.ClientProxy", serverSide = "mmm.esm.thirst.CommonProxy")
      public static CommonProxy proxy;
      
@@ -53,15 +57,21 @@ public class ThirstMod {
      
      public final static Item PureWaterCup = new PureWaterCupItem(4053);
      
+     public final static Item BoilingWaterCup = new BoilingWaterCupItem (4054);
+     
      public final static Item filteredWaterCup = new FilteredWaterCupItem(4052);
      
      public final static Item unfilteredWaterCup = new UnfilteredWaterCupItem(4051);
 
      public final static Item woodenCup = new WoodenCupItem(4050);
-     
-     public final static Block blockCondensator = new BlockCondensator(4055);
     
- 
+     public final static Block blockCondensator = new BlockCondensator(4055);
+     
+     public final static Item canteenFilled = new CanteenFilledItem(4056);
+    
+     public final static Item canteenUnfilled = new CanteenUnfilledItem(4057);
+     
+     public final static Block blockBarrel = new BlockBarrel(4058);
      
      
      @PreInit
@@ -74,16 +84,21 @@ public class ThirstMod {
 	 	LanguageRegistry.addName(woodenCup, "Wooden Cup");
 		LanguageRegistry.addName(unfilteredWaterCup, "Cup of Unfiltered Water");
 		LanguageRegistry.addName(PureWaterCup, "Cup of Pure Water");
+		LanguageRegistry.addName(canteenFilled, "Canteen with pure water");
+		LanguageRegistry.addName(canteenUnfilled, "Canteen");
 		LanguageRegistry.addName(filteredWaterCup, "Cup of Filtered Water");
 		NetworkRegistry.instance().registerGuiHandler(this, this.guihandler);
 		LanguageRegistry.addName(BoilingWaterCup, "Cup of Boiling Water");
 
          
         LanguageRegistry.addName(blockCondensator, "Condensator");
-         
-        ModLoader.registerBlock(blockCondensator);
+        ModLoader.registerBlock(blockCondensator); 
+        
+        ModLoader.registerBlock(blockBarrel);        
+        LanguageRegistry.addName(blockBarrel, "Barrel");
+
         ModLoader.registerTileEntity(TileEntityCondensator.class, TileEntityCondensator.Name);
-         
+        ModLoader.registerTileEntity(TileEntityBarrel.class, TileEntityBarrel.Name);
          
          
         ItemStack coal = new ItemStack(Item.coal);	

@@ -1,5 +1,6 @@
 package mmm.esm.thirst.items.condensator;
 
+import mmm.esm.thirst.blocks.TileEntityCondensator;
 import mmm.esm.thirst.items.PureWaterCupItem;
 import mmm.esm.thirst.items.UnfilteredWaterCupItem;
 import net.minecraft.inventory.IInventory;

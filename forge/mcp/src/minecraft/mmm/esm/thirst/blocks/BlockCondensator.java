@@ -1,8 +1,7 @@
-package mmm.esm.thirst.items.condensator;
+package mmm.esm.thirst.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import mmm.esm.thirst.ThirstMod;
-import mmm.esm.thirst.blocks.TileEntityCondensator;
 import mmm.esm.thirst.items.condensator.gui.CondensatorGui;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBrewingStand;

@@ -1,4 +1,4 @@
-package mmm.esm.thirst.items.condensator;
+package mmm.esm.thirst.blocks;
 
 import mmm.esm.thirst.ThirstMod;
 import mmm.esm.thirst.items.BoilingWaterCupItem;

@@ -4,8 +4,8 @@ import org.lwjgl.opengl.GL11;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import mmm.esm.thirst.blocks.TileEntityCondensator;
 import mmm.esm.thirst.items.condensator.ContainerCondensator;
-import mmm.esm.thirst.items.condensator.TileEntityCondensator;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;

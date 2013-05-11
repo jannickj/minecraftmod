@@ -2,9 +2,11 @@ package mmm.esm.thirst.items;
 
 import mmm.esm.thirst.ItemDrink;
 import mmm.esm.thirst.ThirstMod;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
@@ -12,6 +14,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumMovingObjectType;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeHooks;
 
 public class WoodenCupItem extends Item {
 
@@ -21,6 +24,8 @@ public class WoodenCupItem extends Item {
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName("woodenCup");
+		this.setMaxDamage(100);
+		
 		
 	}
 	
@@ -30,9 +35,15 @@ public class WoodenCupItem extends Item {
 	         this.itemIcon = iconRegister.registerIcon("ThirstMod:WoodenCup");
 	}
 	
+	
+	
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
 		MovingObjectPosition movingobjectposition = this.getMovingObjectPositionFromPlayer(par2World, par3EntityPlayer, true);
+		
+		
+		par1ItemStack.damageItem(20, par3EntityPlayer);
+		
 		if(movingobjectposition == null)
 			return par1ItemStack;
 		

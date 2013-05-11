@@ -1,7 +1,7 @@
 package mmm.esm.thirst.gui;
 
+import mmm.esm.thirst.blocks.TileEntityCondensator;
 import mmm.esm.thirst.items.condensator.ContainerCondensator;
-import mmm.esm.thirst.items.condensator.TileEntityCondensator;
 import mmm.esm.thirst.items.condensator.gui.CondensatorGui;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
