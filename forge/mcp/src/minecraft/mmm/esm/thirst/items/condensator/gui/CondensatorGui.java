@@ -45,7 +45,7 @@ public class CondensatorGui extends GuiContainer {
 
             if (j1 > 0)
             {
-                this.drawTexturedModalRect(k + 97, l + 16, 176, 0, 9, j1);
+                this.drawTexturedModalRect(k + 97, l + 16 + 28 - j1, 176, 28 - j1, 9, 28);
             }
 
             int k1 = i1 / 2 % 7;

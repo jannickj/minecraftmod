@@ -1,6 +1,7 @@
 package mmm.esm.thirst.items.condensator;
 
-import mmm.esm.thirst.ThirstLoader;
+import mmm.esm.thirst.ThirstMod;
+import mmm.esm.thirst.items.BoilingWaterCupItem;
 import mmm.esm.thirst.items.PureWaterCupItem;
 import mmm.esm.thirst.items.UnfilteredWaterCupItem;
 import mmm.esm.thirst.items.WoodenCupItem;
@@ -48,7 +49,7 @@ public class TileEntityCondensator extends TileEntity  implements ISidedInventor
 		
 		Item itm0 = stack0.getItem();
 		Item itm1 = stack1.getItem();
-		return itm0 instanceof UnfilteredWaterCupItem && itm1 instanceof WoodenCupItem;
+		return itm0 instanceof BoilingWaterCupItem && itm1 instanceof WoodenCupItem;
 	}
 	
 	
@@ -66,8 +67,8 @@ public class TileEntityCondensator extends TileEntity  implements ISidedInventor
 		{
 			if(currentTick == 0)
 			{
-				setInventorySlotContents(1, new ItemStack(ThirstLoader.PureWaterCup));
-				setInventorySlotContents(0, new ItemStack(ThirstLoader.woodenCup));
+				setInventorySlotContents(1, new ItemStack(ThirstMod.PureWaterCup));
+				setInventorySlotContents(0, new ItemStack(ThirstMod.woodenCup));
 				condensating = false;
 			}
 			else
@@ -171,7 +172,7 @@ public class TileEntityCondensator extends TileEntity  implements ISidedInventor
 		switch(i)
 		{
 		case 0:
-			return item instanceof UnfilteredWaterCupItem;
+			return item instanceof BoilingWaterCupItem;
 		case 1:
 			return item instanceof PureWaterCupItem;
 		}

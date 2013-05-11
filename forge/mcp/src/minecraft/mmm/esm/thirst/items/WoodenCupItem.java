@@ -1,7 +1,7 @@
 package mmm.esm.thirst.items;
 
 import mmm.esm.thirst.ItemDrink;
-import mmm.esm.thirst.ThirstLoader;
+import mmm.esm.thirst.ThirstMod;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -56,15 +56,20 @@ public class WoodenCupItem extends Item {
             Material m = par2World.getBlockMaterial(i, j, k);
             if (m == Material.water && par2World.getBlockMetadata(i, j, k) == 0)
             {
-            	ItemStack unfiltered = new ItemStack(ThirstLoader.unfilteredWaterCup);
-            	if(!par3EntityPlayer.inventory.addItemStackToInventory(unfiltered))
+            	ItemStack unfiltered = new ItemStack(ThirstMod.unfilteredWaterCup);
+            	if(par1ItemStack.stackSize-1 == 0)
             	{
-            		par3EntityPlayer.dropPlayerItem(unfiltered);
+            		return unfiltered;
             	}
-            	
-            	
-            	
-            	return new ItemStack(par1ItemStack.itemID,par1ItemStack.stackSize-1,par1ItemStack.getItemDamage());
+            	else
+            	{
+	            	if(!par3EntityPlayer.inventory.addItemStackToInventory(unfiltered))
+	            	{
+	            		par3EntityPlayer.dropPlayerItem(unfiltered);
+	            	}           	
+	            	
+	            	return new ItemStack(par1ItemStack.itemID,par1ItemStack.stackSize-1,par1ItemStack.getItemDamage());
+            	}
             }
         }
 		

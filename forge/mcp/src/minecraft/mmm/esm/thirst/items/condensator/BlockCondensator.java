@@ -1,7 +1,7 @@
 package mmm.esm.thirst.items.condensator;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import mmm.esm.thirst.ThirstLoader;
+import mmm.esm.thirst.ThirstMod;
 import mmm.esm.thirst.items.condensator.gui.CondensatorGui;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBrewingStand;
@@ -60,7 +60,7 @@ public class BlockCondensator extends BlockBrewingStand {
             	//mc.displayGuiScreen(new CondensatorGui(par5EntityPlayer.inventory,tileentitybrewingstand));
             	
             	
-            	par5EntityPlayer.openGui(ThirstLoader.instance, 0, par1World, x, y, z);
+            	par5EntityPlayer.openGui(ThirstMod.instance, 0, par1World, x, y, z);
             	
             }
 

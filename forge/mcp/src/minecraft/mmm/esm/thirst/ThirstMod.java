@@ -39,11 +39,11 @@ import mmm.esm.thirst.network.*;
 @SidedPacketHandler(channels = {"thirstmod" }, packetHandler = ThirstClientPackageHandler.class),
 serverPacketHandlerSpec =
 @SidedPacketHandler(channels = {"thirstmod" }, packetHandler = ThirstServerPackageHandler.class))
-public class ThirstLoader {
+public class ThirstMod {
      
      
      @Instance("thirstmod")
-     public static ThirstLoader instance = new ThirstLoader();
+     public static ThirstMod instance = new ThirstMod();
      
      public final static Item BoilingWaterCup = new BoilingWaterCupItem (4054);
      @SidedProxy(clientSide = "mmm.esm.thirst.ClientProxy", serverSide = "mmm.esm.thirst.CommonProxy")
@@ -52,8 +52,6 @@ public class ThirstLoader {
      public static ThirstGuiHandler guihandler = new ThirstGuiHandler();
      
      public final static Item PureWaterCup = new PureWaterCupItem(4053);
-     
-     public final static Item PureWaterCup = new PureWaterCupItem(5000);
      
      public final static Item filteredWaterCup = new FilteredWaterCupItem(4052);
      
@@ -73,12 +71,12 @@ public class ThirstLoader {
      
      @Init
      public void load(FMLInitializationEvent event) {
-             LanguageRegistry.addName(woodenCup, "Wooden Cup");
-             LanguageRegistry.addName(unfilteredWaterCup, "Cup of Unfiltered Water");
-             LanguageRegistry.addName(PureWaterCup, "Cup of Pure Water");
-             LanguageRegistry.addName(filteredWaterCup, "Cup of Filtered Water");
-    	NetworkRegistry.instance().registerGuiHandler(this, this.guihandler);
-             LanguageRegistry.addName(BoilingWaterCup, "Cup of Boiling Water");
+	 	LanguageRegistry.addName(woodenCup, "Wooden Cup");
+		LanguageRegistry.addName(unfilteredWaterCup, "Cup of Unfiltered Water");
+		LanguageRegistry.addName(PureWaterCup, "Cup of Pure Water");
+		LanguageRegistry.addName(filteredWaterCup, "Cup of Filtered Water");
+		NetworkRegistry.instance().registerGuiHandler(this, this.guihandler);
+		LanguageRegistry.addName(BoilingWaterCup, "Cup of Boiling Water");
 
          
         LanguageRegistry.addName(blockCondensator, "Condensator");
