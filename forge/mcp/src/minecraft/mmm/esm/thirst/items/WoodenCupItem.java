@@ -24,7 +24,6 @@ public class WoodenCupItem extends Item {
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName("woodenCup");
-		this.setMaxDamage(100);
 		
 		
 	}
@@ -40,10 +39,7 @@ public class WoodenCupItem extends Item {
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
 		MovingObjectPosition movingobjectposition = this.getMovingObjectPositionFromPlayer(par2World, par3EntityPlayer, true);
-		
-		
-		par1ItemStack.damageItem(20, par3EntityPlayer);
-		
+	
 		if(movingobjectposition == null)
 			return par1ItemStack;
 		

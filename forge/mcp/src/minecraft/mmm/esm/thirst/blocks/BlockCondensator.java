@@ -30,7 +30,8 @@ public class BlockCondensator extends BlockBrewingStand {
 	@Override
 	public void registerIcons(IconRegister iconRegister)
     {
-		  this.blockIcon = iconRegister.registerIcon("ThirstMod:WoodenCondensator");		
+		super.registerIcons(iconRegister);
+		this.blockIcon = iconRegister.registerIcon("ThirstMod:WoodenCondensator");		
     }
 
 	
