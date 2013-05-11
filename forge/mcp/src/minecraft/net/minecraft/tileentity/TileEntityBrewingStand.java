@@ -278,12 +278,12 @@ public class TileEntityBrewingStand extends TileEntity implements ISidedInventor
      * Removes from an inventory slot (first arg) up to a specified number (second arg) of items and returns them in a
      * new stack.
      */
-    public ItemStack decrStackSize(int par1, int par2)
+    public ItemStack decrStackSize(int i, int j)
     {
-        if (par1 >= 0 && par1 < this.brewingItemStacks.length)
+        if (i >= 0 && i < this.brewingItemStacks.length)
         {
-            ItemStack itemstack = this.brewingItemStacks[par1];
-            this.brewingItemStacks[par1] = null;
+            ItemStack itemstack = this.brewingItemStacks[i];
+            this.brewingItemStacks[i] = null;
             return itemstack;
         }
         else

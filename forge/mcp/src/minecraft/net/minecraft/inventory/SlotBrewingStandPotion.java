@@ -15,6 +15,7 @@ class SlotBrewingStandPotion extends Slot
     {
         super(par2IInventory, par3, par4, par5);
         this.player = par1EntityPlayer;
+        
     }
 
     /**
