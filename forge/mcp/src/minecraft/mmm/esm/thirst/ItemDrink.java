@@ -14,14 +14,18 @@ public class ItemDrink extends Item
 	private int thirst;
 	private int poisonticks;
 	
+	
+	
 	public ItemDrink(int id, int thirstcount, int poisonticks) {
 		super(id);
 		this.thirst = thirstcount;
 		this.poisonticks = poisonticks;
+		
 	}
 	
 	public ItemStack onEaten(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
+		
 		if(this.poisonticks > 0)
 			par3EntityPlayer.addPotionEffect(new WaterPoisonEffect(this.poisonticks));
 		par2World.playSoundAtEntity(par3EntityPlayer, "random.burp", 0.5F, par2World.rand.nextFloat() * 0.1F + 0.9F);
