@@ -25,5 +25,6 @@ public class Entity
        {
     	 EntityList.addMapping(Zombie.class,"Zombie",54, 44975, 7969893);
     	 EntityList.addMapping(Skeleton.class,"Skeleton",51, 12698049, 4802889);
+    	 EntityList.addMapping(Spider.class,"Spider",52, 3419431, 11013646);
        }
 }

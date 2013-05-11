@@ -11,7 +11,7 @@ public class Zombie extends EntityZombie
 	@Override
 	public int getMaxHealth()
 	{
-		return 100; 
+		return 60; 
 	}
 	
 	@Override
