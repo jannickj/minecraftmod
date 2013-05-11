@@ -19,11 +19,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.src.ModLoader;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityBrewingStand;
+import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 import mmm.esm.thirst.*;
 
 public class BlockBarrel extends BlockContainer {
 
+	
+	private Icon icon;
 	
 	public BlockBarrel(int par1) {
 		super(par1, Material.wood);
@@ -37,9 +40,14 @@ public class BlockBarrel extends BlockContainer {
 	@Override
 	public void registerIcons(IconRegister iconRegister)
     {
-		  this.blockIcon = iconRegister.registerIcon("ThirstMod:WoodenCondensator");		
+		  this.icon = iconRegister.registerIcon("wood_spruce");		
     }
-
+	
+	@Override
+	public Icon getIcon(int par1, int par2)
+    {
+        return icon;
+    }
 	
 	@Override
 	public TileEntity createNewTileEntity(World par1World)

@@ -108,9 +108,15 @@ public class ThirstMod {
         for(int i = 0; i < 4; i++)
         	GameRegistry.addRecipe(new ItemStack(woodenCup,3), "x x", "x x", " x ", 'x', new ItemStack(Block.planks,1,i));
         GameRegistry.addRecipe(new ItemStack(filteredWaterCup), " x", " y", 'x', coal, 'y', unfilteredWaterCup);
-             GameRegistry.addSmelting(filteredWaterCup.itemID,new ItemStack (BoilingWaterCup),0.5F);
-             GameRegistry.addSmelting(unfilteredWaterCup.itemID,new ItemStack (BoilingWaterCup),0.2F);
-            
+        GameRegistry.addSmelting(filteredWaterCup.itemID,new ItemStack (BoilingWaterCup),0.5F);
+		GameRegistry.addSmelting(unfilteredWaterCup.itemID,new ItemStack (BoilingWaterCup),0.2F);
+        
+		GameRegistry.addRecipe(new ItemStack(canteenUnfilled)," X ", "Y Y", " Y ", 'X', Item.ingotIron, 'Y', Item.leather);
+		
+		for(int i = 0; i < 4; i++)
+			GameRegistry.addRecipe(new ItemStack(blockBarrel),"XXX", "X X", "XXX", 'X',  new ItemStack(Block.wood,1,i) );
+		for(int i = 0; i < 4; i++)
+			GameRegistry.addRecipe(new ItemStack(blockCondensator),"XYX"," Y ","ZZZ", 'X', new ItemStack(Item.stick), 'Y', new ItemStack(Block.planks,1,i), 'Z', new ItemStack(Block.cobblestone));
              
      }
      
