@@ -1,0 +1,160 @@
+2013-05-12 19:00:32 [INFO] Starting minecraft server version 1.5.2
+2013-05-12 19:00:32 [WARNING] To start the server with more ram, launch it as "java -Xmx1024M -Xms1024M -jar minecraft_server.jar"
+2013-05-12 19:00:34 [INFO] Loading properties
+2013-05-12 19:00:34 [WARNING] server.properties does not exist
+2013-05-12 19:00:34 [INFO] Generating new properties file
+2013-05-12 19:00:34 [INFO] Default game type: SURVIVAL
+2013-05-12 19:00:34 [INFO] Generating keypair
+2013-05-12 19:00:35 [INFO] Starting Minecraft server on *:25565
+2013-05-12 19:00:35 [WARNING] Failed to load operators list: java.io.FileNotFoundException: .\ops.txt (The system cannot find the file specified)
+2013-05-12 19:00:35 [WARNING] Failed to load white-list: java.io.FileNotFoundException: .\white-list.txt (The system cannot find the file specified)
+2013-05-12 19:00:35 [INFO] Preparing level "world"
+2013-05-12 19:00:35 [WARNING] Unable to find spawn biome
+2013-05-12 19:00:36 [INFO] Preparing start region for level 0
+2013-05-12 19:00:37 [INFO] Preparing spawn area: 15%
+2013-05-12 19:00:38 [INFO] Preparing spawn area: 28%
+2013-05-12 19:00:39 [INFO] Preparing spawn area: 39%
+2013-05-12 19:00:40 [INFO] Preparing spawn area: 50%
+2013-05-12 19:00:41 [INFO] Preparing spawn area: 60%
+2013-05-12 19:00:42 [INFO] Preparing spawn area: 68%
+2013-05-12 19:00:43 [INFO] Preparing spawn area: 77%
+2013-05-12 19:00:44 [INFO] Preparing spawn area: 84%
+2013-05-12 19:00:45 [INFO] Preparing spawn area: 94%
+2013-05-12 19:00:46 [INFO] Done (11,122s)! For help, type "help" or "?"
+2013-05-12 19:01:04 [INFO] Enzain[/127.0.0.1:31046] logged in with entity id 3260 at (388.5, 68.0, 263.5)
+2013-05-12 19:01:18 [INFO] Enzain lost connection: disconnect.quitting
+2013-05-12 19:03:52 [INFO] Starting minecraft server version 1.5.2
+2013-05-12 19:03:52 [WARNING] To start the server with more ram, launch it as "java -Xmx1024M -Xms1024M -jar minecraft_server.jar"
+2013-05-12 19:03:54 [INFO] Loading properties
+2013-05-12 19:03:54 [INFO] Default game type: SURVIVAL
+2013-05-12 19:03:54 [INFO] Generating keypair
+2013-05-12 19:03:54 [INFO] Starting Minecraft server on *:25565
+2013-05-12 19:03:54 [INFO] Preparing level "world"
+2013-05-12 19:03:54 [INFO] Preparing start region for level 0
+2013-05-12 19:03:55 [INFO] Preparing spawn area: 9%
+2013-05-12 19:03:56 [INFO] Preparing spawn area: 16%
+2013-05-12 19:03:57 [INFO] Preparing spawn area: 23%
+2013-05-12 19:03:58 [INFO] Preparing spawn area: 29%
+2013-05-12 19:03:59 [INFO] Preparing spawn area: 36%
+2013-05-12 19:04:00 [INFO] Preparing spawn area: 44%
+2013-05-12 19:04:01 [INFO] Preparing spawn area: 53%
+2013-05-12 19:04:02 [INFO] Preparing spawn area: 61%
+2013-05-12 19:04:03 [INFO] Preparing spawn area: 69%
+2013-05-12 19:04:04 [INFO] Preparing spawn area: 77%
+2013-05-12 19:04:05 [INFO] Preparing spawn area: 85%
+2013-05-12 19:04:06 [INFO] Preparing spawn area: 92%
+2013-05-12 19:04:07 [INFO] Done (13,384s)! For help, type "help" or "?"
+2013-05-12 19:04:36 [INFO] Player360 [/127.0.0.1:31080] lost connection
+2013-05-12 19:05:02 [INFO] Player360 [/127.0.0.1:31085] lost connection
+2013-05-12 19:05:46 [INFO] Starting minecraft server version 1.5.2
+2013-05-12 19:05:46 [WARNING] To start the server with more ram, launch it as "java -Xmx1024M -Xms1024M -jar minecraft_server.jar"
+2013-05-12 19:05:48 [INFO] Loading properties
+2013-05-12 19:05:48 [INFO] Default game type: SURVIVAL
+2013-05-12 19:05:48 [INFO] Generating keypair
+2013-05-12 19:05:48 [INFO] Starting Minecraft server on *:25565
+2013-05-12 19:05:49 [INFO] Preparing level "world"
+2013-05-12 19:05:49 [INFO] Preparing start region for level 0
+2013-05-12 19:05:50 [INFO] Done (1,248s)! For help, type "help" or "?"
+2013-05-12 19:05:57 [INFO] Player375 [/127.0.0.1:31102] lost connection
+2013-05-12 19:06:16 [INFO] Starting minecraft server version 1.5.2
+2013-05-12 19:06:16 [WARNING] To start the server with more ram, launch it as "java -Xmx1024M -Xms1024M -jar minecraft_server.jar"
+2013-05-12 19:06:18 [INFO] Loading properties
+2013-05-12 19:06:18 [INFO] Default game type: SURVIVAL
+2013-05-12 19:06:18 [INFO] Generating keypair
+2013-05-12 19:06:18 [INFO] Starting Minecraft server on *:25565
+2013-05-12 19:06:18 [INFO] Preparing level "world"
+2013-05-12 19:06:19 [INFO] Preparing start region for level 0
+2013-05-12 19:06:19 [INFO] Done (1,087s)! For help, type "help" or "?"
+2013-05-12 19:06:44 [INFO] Disconnecting Enzain [/127.0.0.1:31123]: The server requires mods that are absent or out of date on your client
+2013-05-12 19:08:52 [INFO] Starting minecraft server version 1.5.2
+2013-05-12 19:08:52 [WARNING] To start the server with more ram, launch it as "java -Xmx1024M -Xms1024M -jar minecraft_server.jar"
+2013-05-12 19:08:53 [INFO] Loading properties
+2013-05-12 19:08:53 [INFO] Default game type: SURVIVAL
+2013-05-12 19:08:53 [INFO] Generating keypair
+2013-05-12 19:08:54 [INFO] Starting Minecraft server on *:25565
+2013-05-12 19:08:54 [INFO] Preparing level "world"
+2013-05-12 19:08:54 [INFO] Preparing start region for level 0
+2013-05-12 19:08:55 [INFO] Preparing spawn area: 94%
+2013-05-12 19:08:55 [INFO] Done (1,218s)! For help, type "help" or "?"
+2013-05-12 19:09:35 [INFO] Enzain[/127.0.0.1:31164] logged in with entity id 262 at (388.60987485440256, 71.0, 271.12783176584435)
+2013-05-12 19:09:40 [WARNING] Can't keep up! Did the system time change, or is the server overloaded?
+2013-05-12 19:11:48 [INFO] Enzain lost connection: disconnect.endOfStream
+2013-05-12 19:11:53 [INFO] /127.0.0.1:31172 lost connection
+2013-05-12 19:11:56 [INFO] Enzain[/127.0.0.1:31174] logged in with entity id 436 at (388.60987485440256, 45.0, 271.12783176584435)
+2013-05-12 19:12:24 [INFO] Enzain lost connection: disconnect.quitting
+2013-05-12 19:12:27 [WARNING] Can't keep up! Did the system time change, or is the server overloaded?
+2013-05-12 19:12:33 [INFO] Stopping server
+2013-05-12 19:12:33 [INFO] Saving players
+2013-05-12 19:12:33 [INFO] Saving worlds
+2013-05-12 19:12:33 [INFO] Saving chunks for level 'world'/Overworld
+2013-05-12 19:12:33 [INFO] Closing listening thread
+2013-05-12 19:12:33 [INFO] Saving chunks for level 'world'/Nether
+2013-05-12 19:12:33 [INFO] Saving chunks for level 'world'/The End
+2013-05-12 19:18:54 [INFO] Starting minecraft server version 1.5.2
+2013-05-12 19:18:54 [WARNING] To start the server with more ram, launch it as "java -Xmx1024M -Xms1024M -jar minecraft_server.jar"
+2013-05-12 19:18:55 [INFO] Loading properties
+2013-05-12 19:18:55 [INFO] Default game type: SURVIVAL
+2013-05-12 19:18:56 [INFO] Generating keypair
+2013-05-12 19:18:56 [INFO] Starting Minecraft server on *:25565
+2013-05-12 19:18:56 [INFO] Preparing level "world"
+2013-05-12 19:18:56 [INFO] Preparing start region for level 0
+2013-05-12 19:18:57 [INFO] Preparing spawn area: 96%
+2013-05-12 19:18:57 [INFO] Done (1,250s)! For help, type "help" or "?"
+2013-05-12 19:19:15 [INFO] Enzain[/127.0.0.1:31494] logged in with entity id 262 at (383.5904667225513, 60.053362921033404, 300.7205297586901)
+2013-05-12 19:19:39 [INFO] Enzain drowned
+2013-05-12 19:20:24 [INFO] Enzain lost connection: disconnect.quitting
+2013-05-12 19:20:49 [INFO] Enzain[/127.0.0.1:31525] logged in with entity id 1627 at (-18.69999998807907, 75.0, 259.18799770277496)
+2013-05-12 19:20:57 [WARNING] Can't keep up! Did the system time change, or is the server overloaded?
+2013-05-12 19:21:30 [INFO] Enzain lost connection: disconnect.genericReason
+2013-05-12 19:21:41 [INFO] Starting minecraft server version 1.5.2
+2013-05-12 19:21:41 [WARNING] To start the server with more ram, launch it as "java -Xmx1024M -Xms1024M -jar minecraft_server.jar"
+2013-05-12 19:21:43 [INFO] Loading properties
+2013-05-12 19:21:43 [INFO] Default game type: SURVIVAL
+2013-05-12 19:21:43 [INFO] Generating keypair
+2013-05-12 19:21:43 [INFO] Starting Minecraft server on *:25565
+2013-05-12 19:21:43 [INFO] Preparing level "world"
+2013-05-12 19:21:43 [INFO] Preparing start region for level 0
+2013-05-12 19:21:44 [INFO] Preparing spawn area: 96%
+2013-05-12 19:21:44 [INFO] Done (1,196s)! For help, type "help" or "?"
+2013-05-12 19:22:01 [INFO] Enzain[/127.0.0.1:31559] logged in with entity id 368 at (-18.69999998807907, 75.0, 259.18799770277496)
+2013-05-12 19:22:45 [INFO] Enzain lost connection: disconnect.genericReason
+2013-05-12 19:22:47 [INFO] Stopping server
+2013-05-12 19:22:47 [INFO] Saving players
+2013-05-12 19:22:47 [INFO] Saving worlds
+2013-05-12 19:22:47 [INFO] Saving chunks for level 'world'/Overworld
+2013-05-12 19:22:47 [INFO] Closing listening thread
+2013-05-12 19:22:47 [INFO] Saving chunks for level 'world'/Nether
+2013-05-12 19:22:47 [INFO] Saving chunks for level 'world'/The End
+2013-05-12 19:22:48 [INFO] Stopping server
+2013-05-12 19:22:48 [INFO] Saving players
+2013-05-12 19:22:48 [INFO] Saving worlds
+2013-05-12 19:22:51 [INFO] Starting minecraft server version 1.5.2
+2013-05-12 19:22:51 [WARNING] To start the server with more ram, launch it as "java -Xmx1024M -Xms1024M -jar minecraft_server.jar"
+2013-05-12 19:22:53 [INFO] Loading properties
+2013-05-12 19:22:53 [INFO] Default game type: SURVIVAL
+2013-05-12 19:22:53 [INFO] Generating keypair
+2013-05-12 19:22:53 [INFO] Starting Minecraft server on *:25565
+2013-05-12 19:22:53 [INFO] Preparing level "world"
+2013-05-12 19:22:53 [INFO] Preparing start region for level 0
+2013-05-12 19:22:54 [INFO] Preparing spawn area: 98%
+2013-05-12 19:22:54 [INFO] Done (1,175s)! For help, type "help" or "?"
+2013-05-12 19:24:04 [INFO] Starting minecraft server version 1.5.2
+2013-05-12 19:24:04 [WARNING] To start the server with more ram, launch it as "java -Xmx1024M -Xms1024M -jar minecraft_server.jar"
+2013-05-12 19:24:05 [INFO] Loading properties
+2013-05-12 19:24:05 [INFO] Default game type: SURVIVAL
+2013-05-12 19:24:05 [INFO] Generating keypair
+2013-05-12 19:24:05 [INFO] Starting Minecraft server on *:25565
+2013-05-12 19:24:05 [INFO] Preparing level "world"
+2013-05-12 19:24:05 [INFO] Preparing start region for level 0
+2013-05-12 19:24:06 [INFO] Preparing spawn area: 92%
+2013-05-12 19:24:06 [INFO] Done (1,290s)! For help, type "help" or "?"
+2013-05-12 19:24:20 [INFO] Player219 [/127.0.0.1:31617] lost connection
+2013-05-12 19:24:45 [INFO] Enzain[/127.0.0.1:31635] logged in with entity id 366 at (-18.69999998807907, 75.0, 259.18799770277496)
+2013-05-12 19:24:49 [INFO] Enzain lost connection: disconnect.quitting
+2013-05-12 19:24:52 [INFO] Stopping server
+2013-05-12 19:24:52 [INFO] Saving players
+2013-05-12 19:24:52 [INFO] Saving worlds
+2013-05-12 19:24:52 [INFO] Saving chunks for level 'world'/Overworld
+2013-05-12 19:24:52 [INFO] Closing listening thread
+2013-05-12 19:24:52 [INFO] Saving chunks for level 'world'/Nether
+2013-05-12 19:24:52 [INFO] Saving chunks for level 'world'/The End

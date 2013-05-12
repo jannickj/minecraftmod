@@ -33,6 +33,7 @@ public class Packet8UpdateHealth extends Packet
         this.healthMP = par1DataInputStream.readShort();
         this.food = par1DataInputStream.readShort();
         this.foodSaturation = par1DataInputStream.readFloat();
+        this.thirstlevel = par1DataInputStream.readInt();
     }
 
     /**
@@ -43,6 +44,7 @@ public class Packet8UpdateHealth extends Packet
         par1DataOutputStream.writeShort(this.healthMP);
         par1DataOutputStream.writeShort(this.food);
         par1DataOutputStream.writeFloat(this.foodSaturation);
+        par1DataOutputStream.writeInt(this.thirstlevel);
     }
 
     /**

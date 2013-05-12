@@ -42,7 +42,6 @@ public class ThirstStats
 
 	public void onUpdate(EntityPlayer entityPlayer) 
 	{
-		
 		if(entityPlayer.isEntityInvulnerable())
 			return;
 		
@@ -93,6 +92,7 @@ public class ThirstStats
 		
 	}
 
+	
 	public int getThirstLevel() {
 		// TODO Auto-generated method stub
 		return this.thirst_level;

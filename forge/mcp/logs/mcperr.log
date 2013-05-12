@@ -77,3 +77,17 @@
 06:04:38 - !! Can not find server md5s !!
 06:04:44 - "scalac" is not found on the PATH.  Scala files will not be recompiled
 06:04:54 - !! Can not find server md5s !!
+18:56:53 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+18:57:37 - !! Can not find server sources, try decompiling !!
+18:57:45 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+18:57:46 - !! Can not find server md5s !!
+18:57:51 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+18:58:03 - !! Can not find server md5s !!
+19:25:18 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+19:25:19 - !! Modified jar detected. Unpredictable results !!
+19:25:19 - !! client already decompiled. Run cleanup before decompiling again !!
+19:25:19 - !! Missing server jar file. Aborting !!
+19:25:28 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+19:25:33 - !! Can not find server md5s !!
+19:25:38 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+19:25:50 - !! Can not find server md5s !!
