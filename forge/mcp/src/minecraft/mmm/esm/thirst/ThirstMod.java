@@ -3,6 +3,7 @@ package mmm.esm.thirst;
 import mmm.esm.thirst.blocks.BlockBarrel;
 import mmm.esm.thirst.blocks.TileEntityBarrel;
 import mmm.esm.thirst.blocks.TileEntityCondensator;
+import mmm.esm.thirst.dispenserbehavior.PureWaterCupDispenserBehavior;
 import mmm.esm.thirst.gui.ThirstGuiHandler;
 import mmm.esm.thirst.items.CanteenFilledItem;
 import mmm.esm.thirst.items.CanteenUnfilledItem;
@@ -117,7 +118,8 @@ public class ThirstMod {
 			GameRegistry.addRecipe(new ItemStack(blockBarrel),"XXX", "X X", "XXX", 'X',  new ItemStack(Block.wood,1,i) );
 		for(int i = 0; i < 4; i++)
 			GameRegistry.addRecipe(new ItemStack(blockCondensator),"XYX"," Y ","ZZZ", 'X', new ItemStack(Item.stick), 'Y', new ItemStack(Block.planks,1,i), 'Z', new ItemStack(Block.cobblestone));
-             
+        
+		ModLoader.addDispenserBehavior(PureWaterCup, new PureWaterCupDispenserBehavior());
      }
      
      @PostInit

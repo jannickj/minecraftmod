@@ -44,12 +44,12 @@ public class TileEntityCondensator extends TileEntity  implements ISidedInventor
 	{
 		ItemStack stack0 = getStackInSlot(0);
 		ItemStack stack1 = getStackInSlot(1);
-		if(stack0 == null || stack1 == null)
+		if(stack0 == null)// || stack1 == null)
 			return false;
 		
 		Item itm0 = stack0.getItem();
-		Item itm1 = stack1.getItem();
-		return itm0 instanceof BoilingWaterCupItem && itm1 instanceof WoodenCupItem;
+
+		return itm0 instanceof BoilingWaterCupItem && stack1 == null;
 	}
 	
 	
@@ -68,7 +68,8 @@ public class TileEntityCondensator extends TileEntity  implements ISidedInventor
 			if(currentTick == 0)
 			{
 				setInventorySlotContents(1, new ItemStack(ThirstMod.PureWaterCup));
-				setInventorySlotContents(0, new ItemStack(ThirstMod.woodenCup));
+				//setInventorySlotContents(0, new ItemStack(ThirstMod.woodenCup));
+				setInventorySlotContents(0, null);
 				condensating = false;
 			}
 			else
@@ -166,8 +167,8 @@ public class TileEntityCondensator extends TileEntity  implements ISidedInventor
 		if(item == null)
 			return false;
 		
-		if(item instanceof WoodenCupItem)
-			return true;
+//		if(item instanceof WoodenCupItem)
+//			return true;
 		
 		switch(i)
 		{
@@ -181,9 +182,17 @@ public class TileEntityCondensator extends TileEntity  implements ISidedInventor
 	}
 
 	@Override
-	public int[] getAccessibleSlotsFromSide(int var1) {
-		// TODO Auto-generated method stub
-		return null;
+	public int[] getAccessibleSlotsFromSide(int i) {
+		
+		//System.out.println("ACCESSING SIDE "+i);
+		if(this.condensating)
+			return new int[0];
+		
+		if(i == 0)
+			return new int[]{1};
+		else
+			return new int[]{0};
+		
 	}
 
 	@Override
