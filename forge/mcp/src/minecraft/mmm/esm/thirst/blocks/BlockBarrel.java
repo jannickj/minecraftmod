@@ -40,7 +40,7 @@ public class BlockBarrel extends BlockContainer {
 	@Override
 	public void registerIcons(IconRegister iconRegister)
     {
-		  this.icon = iconRegister.registerIcon("wood_spruce");		
+		  this.icon = iconRegister.registerIcon("tree_spruce");		
     }
 	
 	@Override
