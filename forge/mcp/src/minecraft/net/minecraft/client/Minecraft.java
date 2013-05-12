@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import javax.swing.JPanel;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.audio.SoundManager;
 import net.minecraft.client.entity.EntityClientPlayerMP;
@@ -122,6 +123,8 @@ import org.lwjgl.opengl.PixelFormat;
 import org.lwjgl.util.glu.GLU;
 
 import com.google.common.collect.MapDifference;
+
+import core.thirst.ThirstGuiOverLay;
 
 import net.minecraftforge.client.GuiIngameForge;
 import net.minecraftforge.common.ForgeHooks;
@@ -457,7 +460,7 @@ public abstract class Minecraft implements Runnable, IPlayerUsage
         }
 
         this.checkGLError("Post startup");
-        this.ingameGUI = new GuiIngameForge(this);
+        this.ingameGUI = new ThirstGuiOverLay(this);;
 
         if (this.serverName != null)
         {

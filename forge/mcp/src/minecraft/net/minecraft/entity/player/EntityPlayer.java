@@ -8,7 +8,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import mmm.esm.thirst.ThirstStats;
+import core.thirst.ThirstStats;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
 import net.minecraft.block.material.Material;

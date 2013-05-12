@@ -12,8 +12,6 @@ import org.lwjgl.opengl.GL12;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 
-import mmm.esm.thirst.gui.ThirstGui;
-import mmm.esm.thirst.gui.ThirstIconCollection;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -68,19 +66,15 @@ public class GuiIngameForge extends GuiIngame
     public static boolean renderAir = true;
     public static boolean renderExperiance = true;
     public static boolean renderObjective = true;
-    public static boolean renderThirst = true;
 
     private ScaledResolution res = null;
     private FontRenderer fontrenderer = null;
     private RenderGameOverlayEvent eventParent;
     private static final String MC_VERSION = (new CallableMinecraftVersion(null)).minecraftVersion();
-    private ThirstGui thirst;
 
     public GuiIngameForge(Minecraft mc)
     {
         super(mc);
-        //mc.thePlayer.get
-        thirst = new ThirstGui(new ThirstIconCollection());
     }
 
     @Override
@@ -118,8 +112,6 @@ public class GuiIngameForge extends GuiIngame
             GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
             zLevel = -90.0F;
             rand.setSeed((long)(updateCounter * 312871));
-            
-            
             mc.renderEngine.bindTexture("/gui/icons.png");
 
             if (renderCrosshairs) renderCrosshairs(width, height);
@@ -127,9 +119,6 @@ public class GuiIngameForge extends GuiIngame
 
             if (this.mc.playerController.shouldDrawHUD())
             {
-            	if(renderThirst) renderThirst(width, height);
-                
-                mc.renderEngine.bindTexture("/gui/icons.png");
                 if (renderArmor)  renderArmor(width, height);
                 if (renderHealth) renderHealth(width, height);
                 if (renderFood)   renderFood(width, height);
@@ -163,16 +152,7 @@ public class GuiIngameForge extends GuiIngame
         GL11.glEnable(GL11.GL_ALPHA_TEST);
     }
 
-    private void renderThirst(int width, int height) 
-    {
-    	int left = width / 2 + 91;
-        int top = height - 49;
-    	mc.renderEngine.bindTexture("/thirstBar.png");
-    	thirst.Draw(this.mc.thePlayer.getThirstStats(), this, left, top);
-		
-	}
-
-	public ScaledResolution getResolution()
+    public ScaledResolution getResolution()
     {
         return res;
     }
@@ -295,7 +275,7 @@ public class GuiIngameForge extends GuiIngame
         if (pre(AIR)) return;
         mc.mcProfiler.startSection("air");
         int left = width / 2 + 91;
-        int top = height - 59;
+        int top = height - 49;
 
         if (mc.thePlayer.isInsideOfMaterial(Material.water))
         {

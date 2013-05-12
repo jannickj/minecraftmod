@@ -7,4 +7,7 @@ logs/
 TestResults/
 *.user
 jars/
-/forge/mcp/jars
+forge/mcp/jars/
+forge/mcp/modsrc/
+/forge/mcp/reobf
+/forge/mcp/eclipse/.metadata

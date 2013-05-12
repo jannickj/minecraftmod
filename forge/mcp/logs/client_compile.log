@@ -1,6 +1,6 @@
-src\minecraft\net\minecraft\client\entity\EntityPlayerSP.java:21: warning: [deprecation] ISidedInventory in net.minecraftforge.common has been deprecated
-import net.minecraft.client.particle.EntityPickupFX;
-                        ^
+src\minecraft\net\minecraft\entity\player\EntityPlayer.java:26: warning: [deprecation] ISidedInventory in net.minecraftforge.common has been deprecated
+import net.minecraft.entity.item.EntityMinecart;
+                              ^
 src\minecraft\net\minecraft\tileentity\TileEntityFurnace.java:502: warning: [deprecation] getSizeInventorySide(ForgeDirection) in ISidedInventory has been deprecated
     public int getSizeInventorySide(ForgeDirection side)
                ^

@@ -43,7 +43,7 @@ import mmm.esm.thirst.network.*;
 
 
 
-@Mod(modid="thirstmod", name="Thirst Mod", version="1.0.0")
+@Mod(modid="thirstmod", name="MMM Thirst Mod", version="1.0.0")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false,clientPacketHandlerSpec =
 @SidedPacketHandler(channels = {"thirstmod" }, packetHandler = ThirstClientPackageHandler.class),
 serverPacketHandlerSpec =
@@ -132,6 +132,8 @@ public class ThirstMod {
 			GameRegistry.addRecipe(new ItemStack(blockCondensator),"XYX"," Y ","ZZZ", 'X', new ItemStack(Item.stick), 'Y', new ItemStack(Block.planks,1,i), 'Z', new ItemStack(Block.cobblestone));
         
 		ModLoader.addDispenserBehavior(PureWaterCup, new PureWaterCupDispenserBehavior());
+		
+		
      }
      
      @PostInit
