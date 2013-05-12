@@ -1,6 +1,8 @@
 package mmm.esm.thirst.items;
 
+import ibxm.Player;
 import mmm.esm.thirst.ItemDrink;
+import mmm.esm.thirst.ThirstItem;
 import mmm.esm.thirst.ThirstMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -16,7 +18,7 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
 
-public class WoodenCupItem extends Item {
+public class WoodenCupItem extends ThirstItem {
 
 
 	public WoodenCupItem(int par1) {
@@ -63,25 +65,14 @@ public class WoodenCupItem extends Item {
             Material m = par2World.getBlockMaterial(i, j, k);
             if (m == Material.water && par2World.getBlockMetadata(i, j, k) == 0)
             {
-            	ItemStack unfiltered = new ItemStack(ThirstMod.unfilteredWaterCup);
-            	if(par1ItemStack.stackSize-1 == 0)
-            	{
-            		return unfiltered;
-            	}
-            	else
-            	{
-	            	if(!par3EntityPlayer.inventory.addItemStackToInventory(unfiltered))
-	            	{
-	            		par3EntityPlayer.dropPlayerItem(unfiltered);
-	            	}           	
-	            	
-	            	return new ItemStack(par1ItemStack.itemID,par1ItemStack.stackSize-1,par1ItemStack.getItemDamage());
-            	}
+            	return turnItemInto(par1ItemStack, par3EntityPlayer, new ItemStack(ThirstMod.unfilteredWaterCup));
             }
         }
 		
 		return par1ItemStack;
 
     }
+	
+	
 	
 }

@@ -17,8 +17,17 @@ public class TileEntityBarrel extends TileEntity {
 		return waterlevel;
 	}
 
-	public void modWaterlevel(int i) {
-		waterlevel+=i;		
+	public int modWaterlevel(int i) {
+		
+		if(waterlevel+i > getMaxWaterlevel())
+		{
+			waterlevel = getMaxWaterlevel();
+		}
+		else
+		{
+			waterlevel+=i;
+		}
+		return waterlevel;
 	}
 	
 	public int getMaxWaterlevel()

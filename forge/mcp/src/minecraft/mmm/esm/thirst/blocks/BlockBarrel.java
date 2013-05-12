@@ -26,7 +26,8 @@ import mmm.esm.thirst.*;
 public class BlockBarrel extends BlockContainer {
 
 	
-	private Icon icon;
+	private Icon iconTop;
+	private Icon iconSide;
 	
 	public BlockBarrel(int par1) {
 		super(par1, Material.wood);
@@ -40,13 +41,17 @@ public class BlockBarrel extends BlockContainer {
 	@Override
 	public void registerIcons(IconRegister iconRegister)
     {
-		  this.icon = iconRegister.registerIcon("tree_spruce");		
+		  this.iconTop = iconRegister.registerIcon("ThirstMod:barrel_top");
+		  this.iconSide = iconRegister.registerIcon("ThirstMod:barrel_side");
     }
 	
 	@Override
-	public Icon getIcon(int par1, int par2)
+	public Icon getIcon(int side, int metadata)
     {
-        return icon;
+		if(side== 1 || side == 0)
+			return iconTop;
+		else
+			return iconSide;
     }
 	
 	@Override
@@ -86,7 +91,9 @@ public class BlockBarrel extends BlockContainer {
 		
 		if(barrel.getWaterlevel() >= 1)
 		{
-			player.setCurrentItemOrArmor(0, new ItemStack(ThirstMod.PureWaterCup));
+
+			player.setCurrentItemOrArmor(0, ThirstMod.woodenCup.turnItemInto(player.getCurrentEquippedItem(), player, new ItemStack(ThirstMod.PureWaterCup)));
+			
 			barrel.modWaterlevel(-1);
 			return true;
 		}
@@ -96,10 +103,10 @@ public class BlockBarrel extends BlockContainer {
 
 	private boolean handleCanteen(TileEntityBarrel barrel, EntityPlayer player, Item itm) {
 		// TODO Auto-generated method stub
-		if(barrel.getWaterlevel() >= 3)
+		if(barrel.getWaterlevel() >= ThirstMod.canteenFilled.getMaxUses())
 		{
 			player.setCurrentItemOrArmor(0, new ItemStack(ThirstMod.canteenFilled));
-			barrel.modWaterlevel(-3);
+			barrel.modWaterlevel(-ThirstMod.canteenFilled.getMaxUses());
 			return true;
 		}
 			

@@ -30,6 +30,13 @@ public class BoilingWaterCupItem extends ItemDrink {
 	public ItemStack onEaten(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
 		super.onEaten(par1ItemStack, par2World, par3EntityPlayer);
+		par3EntityPlayer.attackEntityFrom(DamageSource.generic, boilingWaterDrinkDamage());
 		return new ItemStack(ThirstMod.woodenCup);
     }
+
+
+	private int boilingWaterDrinkDamage() {
+		// TODO Auto-generated method stub
+		return 10;
+	}
 }

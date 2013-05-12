@@ -65,11 +65,11 @@ public class ThirstMod {
      
      public final static Item unfilteredWaterCup = new UnfilteredWaterCupItem(4051);
 
-     public final static Item woodenCup = new WoodenCupItem(4050);
+     public final static ThirstItem woodenCup = new WoodenCupItem(4050);
     
      public final static Block blockCondensator = new BlockCondensator(4055);
      
-     public final static Item canteenFilled = new CanteenFilledItem(4056);
+     public final static CanteenFilledItem canteenFilled = new CanteenFilledItem(4056);
     
      public final static Item canteenUnfilled = new CanteenUnfilledItem(4057);
      

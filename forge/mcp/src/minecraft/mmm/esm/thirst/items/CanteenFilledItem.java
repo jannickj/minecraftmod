@@ -15,7 +15,7 @@ public class CanteenFilledItem extends ItemDrink {
 		setMaxStackSize(1);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName("CanteenFilled");
-		this.setMaxDamage(3);
+		this.setMaxDamage(getMaxUses());
 	}
 	
 	
@@ -31,10 +31,15 @@ public class CanteenFilledItem extends ItemDrink {
 		ItemStack s = par1ItemStack;
 		s.damageItem(1, par3EntityPlayer);
 	
-		if(s.getItemDamage() == 3)
+		if(s.getItemDamage() == getMaxUses())
 		{
 			s = new ItemStack(ThirstMod.canteenUnfilled);
 		}
 		return s;
     }
+	
+	public int getMaxUses()
+	{
+		return 5;
+	}
 }
