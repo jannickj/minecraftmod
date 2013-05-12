@@ -7,6 +7,7 @@ import mmm.esm.thirst.dispenserbehavior.PureWaterCupDispenserBehavior;
 import mmm.esm.thirst.gui.ThirstGuiHandler;
 import mmm.esm.thirst.items.CanteenFilledItem;
 import mmm.esm.thirst.items.CanteenUnfilledItem;
+import mmm.esm.thirst.items.CharcoalFilterItem;
 import mmm.esm.thirst.items.FilteredWaterCupItem;
 import mmm.esm.thirst.items.UnfilteredWaterCupItem;
 import mmm.esm.thirst.items.WoodenCupItem;
@@ -74,6 +75,7 @@ public class ThirstMod {
      
      public final static Block blockBarrel = new BlockBarrel(4058);
      
+     public final static Item CharcoalFilter = new CharcoalFilterItem(4059);
      
      @PreInit
      public void preInit(FMLPreInitializationEvent event) {
@@ -90,7 +92,7 @@ public class ThirstMod {
 		LanguageRegistry.addName(filteredWaterCup, "Cup of Filtered Water");
 		NetworkRegistry.instance().registerGuiHandler(this, this.guihandler);
 		LanguageRegistry.addName(BoilingWaterCup, "Cup of Boiling Water");
-
+		LanguageRegistry.addName(CharcoalFilter, "Charcoal Filter");
          
         LanguageRegistry.addName(blockCondensator, "Condensator");
         ModLoader.registerBlock(blockCondensator); 
@@ -102,16 +104,17 @@ public class ThirstMod {
         ModLoader.registerTileEntity(TileEntityBarrel.class, TileEntityBarrel.Name);
          
          
-        ItemStack coal = new ItemStack(Item.coal);	
-        coal.setItemDamage(1);
+        ItemStack charcoal = new ItemStack(Item.coal);	
+        charcoal.setItemDamage(1);
          
          
         for(int i = 0; i < 4; i++)
         	GameRegistry.addRecipe(new ItemStack(woodenCup,3), "x x", "x x", " x ", 'x', new ItemStack(Block.planks,1,i));
-        GameRegistry.addRecipe(new ItemStack(filteredWaterCup), " x", " y", 'x', coal, 'y', unfilteredWaterCup);
+        GameRegistry.addRecipe(new ItemStack(filteredWaterCup), " x", " y", 'x', charcoal, 'y', unfilteredWaterCup);
+        GameRegistry.addRecipe(new ItemStack(CharcoalFilter,4), " x ", "xyx", " x ", 'x', new ItemStack(Item.stick), 'y', charcoal);
         GameRegistry.addSmelting(filteredWaterCup.itemID,new ItemStack (BoilingWaterCup),0.5F);
-		GameRegistry.addSmelting(unfilteredWaterCup.itemID,new ItemStack (BoilingWaterCup),0.2F);
-        
+		//GameRegistry.addSmelting(unfilteredWaterCup.itemID,new ItemStack (BoilingWaterCup),0.2F);
+        GameRegistry.addRecipe(new ItemStack(filteredWaterCup), " x", " y", 'x', new ItemStack(CharcoalFilter), 'y', new ItemStack(unfilteredWaterCup));
 		GameRegistry.addRecipe(new ItemStack(canteenUnfilled)," X ", "Y Y", " Y ", 'X', Item.ingotIron, 'Y', Item.leather);
 		
 		for(int i = 0; i < 4; i++)
